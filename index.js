@@ -38,9 +38,9 @@ mainRouter.use("/quizzes", quizRouter(quizController));
 mainRouter.use("/announcements", announcementRouter(announcementController));
 
 //if router not found will display this message
-app.all("*", (req, res, next) => {
-  next(new NotFoundError(`Can't find ${req.originalUrl} on this server!`));
-});
+// app.all("*", (req, res, next) => {
+//   next(new NotFoundError(`Can't find ${req.originalUrl} on this server!`));
+// });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
